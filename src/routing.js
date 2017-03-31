@@ -26,7 +26,7 @@ class ModalSwitch extends React.Component {
     return (
       <div>
         <Switch location={isModal ? this.previousLocation : location}>
-          <Route path='/shows' component={Gallery}/>
+          <Route path='/' component={Gallery}/>
           <Route path='/shows/:id' component={Modal}/>
         </Switch>
         {isModal ? <Route path='/shows/:id' component={Modal} /> : null}
