@@ -140,4 +140,21 @@ body {
         max-height: 300px;
       
     }
+
+    .modalContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+    }
+
+    .modal {
+        position: absolute;
+        background: white;
+        padding: 15;
+        border: 2px solid black;
+        display: block;
+    }
 }

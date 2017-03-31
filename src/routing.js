@@ -61,24 +61,8 @@ const Modal = ({ match, history }) => {
     history.goBack()
   }
   return (
-    <div
-      onClick={back}
-      style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-        background: 'rgba(0, 0, 0, 0.15)'
-      }}
-    >
-      <div className='modal' style={{
-      position: 'absolute',
-        background: '#fff',
-        padding: 15,
-        border: '2px solid #444',
-        display:'block'
-      }}>
+    <div className="modalContainer" onClick={back}>
+      <div className='modal'>
         <h1>{show.title}</h1>
         <img alt={show.title} src={show.product_image_url} />
         <p>Number of Episodes: {show.episodes}</p>

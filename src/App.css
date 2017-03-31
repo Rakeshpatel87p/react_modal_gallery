@@ -3,60 +3,67 @@ body {
 
 #topHeader {
   padding-bottom: 2%; }
-  #topHeader div {
-    padding: 1%;
-    background-color: white;
-    position: fixed;
-    width: 100%;
-    height: 3.75rem;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    display: -moz-box;
-    border-bottom: 1px dotted red;
-    align-items: center;
-    justify-content: center; }
+
+#topHeader div {
+  padding: 1%;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 3.75rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  display: -moz-box;
+  border-bottom: 1px dotted red;
+  align-items: center;
+  justify-content: center; }
+
+#topHeader img {
+  left: 31%;
+  position: absolute;
+  display: inline-block;
+  vertical-align: top;
+  float: left; }
+
+@media screen and (min-width: 489px) {
   #topHeader img {
-    left: 31%;
-    position: absolute;
-    display: inline-block;
-    vertical-align: top;
-    float: left; }
-    @media screen and (min-width: 489px) {
-      #topHeader img {
-        left: 37%;
-        animation-duration: 1.42s;
-        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-        animation-delay: 1s;
-        animation-name: logoLeftSlide;
-        animation-fill-mode: forwards; }
-      @keyframes logoLeftSlide {
-        from {
-          left: 37%; }
-        to {
-          left: 2.625rem; } } }
-    @media screen and (min-width: 767px) {
-      #topHeader img {
-        left: 40%; } }
+    left: 37%;
+    animation-duration: 1.42s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-delay: 1s;
+    animation-name: logoLeftSlide;
+    animation-fill-mode: forwards; }
+  @keyframes logoLeftSlide {
+    from {
+      left: 37%; }
+    to {
+      left: 2.625rem; } } }
+
+@media screen and (min-width: 767px) {
+  #topHeader img {
+    left: 40%; } }
+
+#topHeader h1 {
+  opacity: 0;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.8px;
+  text-transform: uppercase; }
+
+@media screen and (min-width: 600px) {
   #topHeader h1 {
-    opacity: 0;
-    font-family: "Oswald", sans-serif;
-    letter-spacing: 0.8px;
-    text-transform: uppercase; }
-    @media screen and (min-width: 600px) {
-      #topHeader h1 {
-        display: inline-block;
-        display: -moz-inline-stack;
-        vertical-align: top;
-        float: right;
-        animation-delay: 1s;
-        animation-duration: 5s;
-        animation-name: opacityDelay;
-        animation-fill-mode: forwards; } }
-    @media screen and (min-width: 872px) {
-      #topHeader h1 {
-        margin-right: 3%; } }
+    display: inline-block;
+    display: -moz-inline-stack;
+    vertical-align: top;
+    float: right;
+    animation-delay: 1s;
+    animation-duration: 5s;
+    animation-name: opacityDelay;
+    animation-fill-mode: forwards; } }
+
+@media screen and (min-width: 872px) {
+  #topHeader h1 {
+    margin-right: 3%; } }
 
 @keyframes opacityDelay {
   from {
@@ -88,12 +95,14 @@ body {
   display: -webkit-flex;
   display: flex;
   justify-content: center; }
-  @media screen and (min-width: 749px) {
-    #app div {
-      padding-top: 7%; } }
-  @media screen and (min-width: 980px) {
-    #app div {
-      padding-top: 5%; } }
+
+@media screen and (min-width: 749px) {
+  #app div {
+    padding-top: 7%; } }
+
+@media screen and (min-width: 980px) {
+  #app div {
+    padding-top: 5%; } }
 
 #app h1 {
   font-size: 28px;
@@ -103,3 +112,17 @@ body {
 #app > div img {
   border: 1px dotted blue;
   max-height: 300px; }
+
+#app .modalContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+#app .modal {
+  position: absolute;
+  background: white;
+  padding: 15;
+  border: 2px solid black;
+  display: block; }
