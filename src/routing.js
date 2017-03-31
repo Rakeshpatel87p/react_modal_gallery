@@ -75,11 +75,9 @@ const Modal = ({ match, history }) => {
       <div className='modal' style={{
       position: 'absolute',
         background: '#fff',
-        top: 25,
-        left: '10%',
-        right: '10%',
         padding: 15,
-        border: '2px solid #444'
+        border: '2px solid #444',
+        display:'block'
       }}>
         <h1>{show.title}</h1>
         <img alt={show.title} src={show.product_image_url} />
