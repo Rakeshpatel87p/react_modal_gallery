@@ -1,0 +1,143 @@
+$headerFont: 'Oswald', sans-serif;
+$backgroundColor: #f1f1f1;
+
+body {
+    background-color: $backgroundColor;
+}
+
+#topHeader {
+    padding-bottom: 2%;
+
+    div {
+        padding: 1%;
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        height: 3.75rem;
+        top: 0;
+        left: 0;
+        right: 0;
+        display:flex;
+        display: -moz-box;
+        border-bottom: 1px dotted red;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    img {
+        left: 31%;
+        position: absolute;
+        display:inline-block;
+        vertical-align: top;
+        float:left;
+
+        @media screen and (min-width: 489px){
+            left:37%;
+            animation-duration: 1.42s;
+            animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+            animation-delay: 1s;
+            animation-name: logoLeftSlide;
+            animation-fill-mode: forwards;
+
+            @keyframes logoLeftSlide {
+                from {left: 37%;}
+                to {left: 2.625rem;}
+            }
+        }
+        @media screen and (min-width: 767px){
+            left:40%;
+        }  
+    }
+
+    h1 {
+        opacity: 0;
+        font-family: $headerFont;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        
+
+        @media screen and (min-width: 600px){
+            display: inline-block;
+            display: -moz-inline-stack;
+            vertical-align: top;
+            float: right;
+            
+            animation-delay: 1s;
+            animation-duration: 5s;
+            animation-name: opacityDelay;
+            animation-fill-mode: forwards;
+        }
+
+        @media screen and (min-width: 872px){
+            margin-right:3%;
+        }
+
+        @keyframes opacityDelay {
+            from {opacity: 0;}
+            to {opacity: 1;}
+            }
+    }
+
+}
+
+#header {
+    * {
+        margin-left: 3.5%;
+        width: 94%;
+    }
+
+    
+    h1 {
+        text-align: center;
+        padding: 10% 0;
+        background-color: black;
+        box-shadow: 0px 8px 10px #551A8B;
+        font-size: 50px;
+        font-family: $headerFont;
+        color: white
+    }
+}
+
+#app {
+    #app {
+        @media screen and (min-width: 864px){
+          margin-left:2%;
+        }
+
+    }
+    
+    div {
+        padding: 2%;
+        padding-top:10%;
+        flex-wrap: wrap;
+        display: -webkit-flex;
+        display:flex;
+        justify-content: center;
+
+        @media screen and (min-width: 749px){
+            padding-top:7%;
+        };
+
+         @media screen and (min-width: 980px){
+            padding-top:5%;
+        };
+    }
+
+    > div > div {
+
+
+    }
+
+    h1 {
+        font-size: 28px;
+        opacity: 0;
+        display:none;
+    }
+
+    > div img {
+      border: 1px dotted blue;
+        max-height: 300px;
+      
+    }
+}
