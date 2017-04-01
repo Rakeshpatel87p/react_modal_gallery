@@ -1,7 +1,7 @@
 $headerFont: 'Oswald', sans-serif;
-$backgroundColor: #f1f1f1;
 
 body {
+    $backgroundColor: #f1f1f1;
     background-color: $backgroundColor;
 }
 
@@ -79,24 +79,6 @@ body {
             }
     }
 
-}
-
-#header {
-    * {
-        margin-left: 3.5%;
-        width: 94%;
-    }
-
-    
-    h1 {
-        text-align: center;
-        padding: 10% 0;
-        background-color: black;
-        box-shadow: 0px 8px 10px #551A8B;
-        font-size: 50px;
-        font-family: $headerFont;
-        color: white
-    }
 }
 
 #app {
