@@ -7,7 +7,6 @@ class ModalSwitch extends React.Component {
 
   componentWillUpdate(nextProps) {
     const { location } = this.props
-    // set previousLocation if props.location is not modal
     if (
       nextProps.history.action !== 'POP' &&
       (!location.state || !location.state.modal)
@@ -26,7 +25,7 @@ class ModalSwitch extends React.Component {
     return (
       <div>
         <Switch location={isModal ? this.previousLocation : location}>
-          <Route path='/' component={Gallery}/>
+          <Route path='/' component={showGallery}/>
           <Route path='/shows/:id' component={Modal}/>
         </Switch>
         {isModal ? <Route path='/shows/:id' component={Modal} /> : null}
@@ -35,7 +34,7 @@ class ModalSwitch extends React.Component {
   }
 }
 
-const Gallery = () => (
+const showGallery = () => (
   <div>
     {Shows.map(i => (
       <Link
@@ -45,7 +44,7 @@ const Gallery = () => (
           state: { modal: true }
         }}
       >
-        <img alt={i.title} src={i.product_image_url} />
+        <img className="galleryImage" alt={i.title} src={i.product_image_url} />
       </Link>
     ))}
   </div>
