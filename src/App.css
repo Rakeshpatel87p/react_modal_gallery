@@ -111,11 +111,7 @@ body {
   transform: scale(1.1); }
 
 #app .modalContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; }
+  position: absolute; }
 
 #app .modal {
   position: absolute;

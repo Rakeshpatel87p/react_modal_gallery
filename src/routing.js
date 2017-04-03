@@ -4,7 +4,6 @@ import Shows from './shows';
 
 class ModalSwitch extends React.Component {
   previousLocation = this.props.location
-
   componentWillUpdate(nextProps) {
     const { location } = this.props
     if (
@@ -51,6 +50,7 @@ const showGallery = () => (
 )
 
 const Modal = ({ match, history }) => {
+  console.log(event.clientY);
   const show = Shows[parseInt(match.params.id, 10) -1]
   if (!show) {
     return null
@@ -60,7 +60,10 @@ const Modal = ({ match, history }) => {
     history.goBack()
   }
   return (
-    <div className="modalContainer" onClick={back}>
+    <div className="modalContainer" onClick={back} style={{
+          top: event.clientY,
+          left: event.clientX
+        }}>
       <div className='modal'>
         <h1>{show.title}</h1>
         <img alt={show.title} src={show.product_image_url} />
